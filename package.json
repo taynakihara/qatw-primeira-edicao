@@ -1,0 +1,14 @@
+{
+  "name": "qatw-primeira-edicao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:taynakihara/qatw-primeira-edicao.git",
+  "author": "Tayna Kihara <taynakihara1990@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4"
+  },
+  "scripts": {},
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+}
