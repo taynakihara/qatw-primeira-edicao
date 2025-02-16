@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { obterCodigo2FA } from '../support/db'; //importar o código de onde está a query
 import { LoginPage } from '../pages/LoginPage';
+import { DashPage } from '../pages/DashPage';
 
 test('Não deve logar quando o código de autenticação for inválido', async ({ page }) => {
     
@@ -23,6 +24,7 @@ test('Não deve logar quando o código de autenticação for inválido', async (
   test('Deve acessar a conta do usuário', async ({ page }) => {
 
     const loginPage = new LoginPage(page) //ativando a classe dentro dessa const
+    const dashPage = new DashPage(page)
     
     const usuario = {
         cpf: '00000014141',
@@ -42,6 +44,6 @@ test('Não deve logar quando o código de autenticação for inválido', async (
     // temporário
     await page.waitForTimeout(2000)
 
-    expect(await loginPage.obterSaldo()).toHaveText('R$ 5.000,00')
+    expect(await dashPage.obterSaldo()).toHaveText('R$ 5.000,00')
 
   });
